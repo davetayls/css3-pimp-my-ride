@@ -1,0 +1,37 @@
+
+@include keyframes(rock){
+	0% {
+		@include rotateZ(-1deg);
+		top: 0;
+	}
+	25% {
+		top: 9px;
+	}
+	50% {
+		@include rotateZ(1deg);
+		top: 1px;
+	}
+	75% {
+		top: 10px;
+	}
+	100% {
+		@include rotateZ(-1deg);
+		top: 0;
+	}
+}
+@include keyframes(roll){
+	0% {
+		@include rotate(0);
+	}
+	100% {
+		@include rotate(-360deg);
+	}
+}
+@include keyframes(shadow){
+	0%, 50%, 100% {
+		@include scale(1,1);
+	}
+	25%, 75% {
+		@include scale(1,1.3);
+	}
+}

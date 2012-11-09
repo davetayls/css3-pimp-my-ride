@@ -10,16 +10,27 @@
 	</head>
 	<body>
 		<h1>css3 Pimp my Ride</h1>
-		<div id="world">
+		<form method="get" id="world">
 			<div class="ride">
 				<div class="ride__car">
 					<img class="ride__body" src="/images/car.png" alt="car">
 					<div class="ride__wheels">
-						<img class="ride__wheels__left" src="/images/wheel-alloy.png" alt="">
-						<img class="ride__wheels__right" src="/images/wheel-alloy.png" alt="">
+						<label for="ride__wheels--alloy">Alloys</label>
+						<input id="ride__wheels--alloy" type="radio" name="ride__wheels" checked />
+						<div class="ride__wheels__set ride__wheels__set--alloy">
+							<img class="ride__wheels__left" src="/images/wheel-alloy.png" alt="">
+							<img class="ride__wheels__right" src="/images/wheel-alloy.png" alt="">
+						</div>
+						<label for="ride__wheels--monster">Monster</label>
+						<input id="ride__wheels--monster" type="radio" name="ride__wheels" />
+						<div class="ride__wheels__set ride__wheels__set--monster">
+							<img class="ride__wheels__left" src="/images/wheel-monster.png" alt="">
+							<img class="ride__wheels__right" src="/images/wheel-monster.png" alt="">
+						</div>
+						<div class="ride__wheels__shadow"></div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</form>
 	</body>
 </html>
