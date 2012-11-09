@@ -13,7 +13,26 @@
 		<form method="get" id="world">
 			<div class="ride">
 				<div class="ride__car">
-					<img class="ride__body" src="/images/car.png" alt="car">
+					<div class="ride__body">
+
+						<div class="ride__color">
+							<img src="/images/car.png" alt="car">
+						</div>
+
+						<div class="ride__spoiler">
+							<label for="ride__spoiler--none">None</label>
+							<input id="ride__spoiler--none" type="radio" name="ride__spoiler" checked />
+
+							<label for="ride__spoiler--single">Single</label>
+							<input id="ride__spoiler--single" type="radio" name="ride__spoiler" />
+							<img class="ride__spoiler__image" src="/images/spoiler-red.png" alt="">
+
+							<label for="ride__spoiler--double">Double</label>
+							<input id="ride__spoiler--double" type="radio" name="ride__spoiler" />
+							<img class="ride__spoiler__image" src="/images/spoiler-double.png" alt="">
+
+						</div>
+					</div>
 					<div class="ride__wheels">
 						<label for="ride__wheels--alloy">Alloys</label>
 						<input id="ride__wheels--alloy" type="radio" name="ride__wheels" checked />

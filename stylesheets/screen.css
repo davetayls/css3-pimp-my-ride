@@ -71,7 +71,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  * Image replacement
  */
 /* line 5, ../sass/utils.scss */
-.ir, .ride__wheels label {
+.ir, .ride__color label, .ride__spoiler label, .ride__wheels label {
   background-color: transparent;
   border: 0;
   overflow: hidden;
@@ -80,7 +80,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 13, ../sass/utils.scss */
-.ir:before, .ride__wheels label:before {
+.ir:before, .ride__color label:before, .ride__spoiler label:before, .ride__wheels label:before {
   content: "";
   display: block;
   width: 0;
@@ -91,7 +91,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
 /* line 24, ../sass/utils.scss */
-.visuallyhidden, .ride__wheels input[type="radio"] {
+.visuallyhidden, .ride__color input[type="radio"], .ride__spoiler input[type="radio"], .ride__wheels input[type="radio"] {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -444,14 +444,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 13, ../sass/screen.scss */
 h1 {
   position: absolute;
-  top: 5%;
-  left: 0;
-  text-align: center;
+  top: 3%;
+  left: 3%;
   width: 100%;
   text-transform: uppercase;
   color: #444;
-  font-size: 3em;
+  font-size: 2em;
   z-index: 3;
+  pointer-events: none;
 }
 
 /* line 24, ../sass/screen.scss */
@@ -498,13 +498,100 @@ h1 {
   animation: rock 2s infinite alternate;
 }
 
-/* line 53, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
+.ride__color label {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  display: block;
+  position: absolute;
+  top: -60px;
+  left: 300px;
+  z-index: 10;
+  padding: 0 20px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 68, ../sass/screen.scss */
+.ride__color label[for="ride__spoiler--single"] {
+  background-image: url(/images/spoiler-red.png);
+  right: 105px;
+}
+/* line 72, ../sass/screen.scss */
+.ride__color label[for="ride__spoiler--double"] {
+  background-image: url(/images/spoiler-double.png);
+  right: 180px;
+}
+/* line 77, ../sass/screen.scss */
+.ride__color img {
+  width: 100%;
+  height: auto;
+}
+/* line 85, ../sass/screen.scss */
+.ride__color input[type="radio"]:checked + img {
+  display: block;
+}
+
+/* line 91, ../sass/screen.scss */
+.ride__spoiler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 140px;
+  height: 120px;
+}
+/* line 98, ../sass/screen.scss */
+.ride__spoiler label {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5) no-repeat center center;
+  background-size: auto 90%;
+  display: block;
+  position: absolute;
+  top: -60px;
+  right: 30px;
+  z-index: 10;
+  padding: 0 20px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 113, ../sass/screen.scss */
+.ride__spoiler label[for="ride__spoiler--single"] {
+  background-image: url(/images/spoiler-red.png);
+  right: 105px;
+}
+/* line 117, ../sass/screen.scss */
+.ride__spoiler label[for="ride__spoiler--double"] {
+  background-image: url(/images/spoiler-double.png);
+  right: 180px;
+}
+/* line 125, ../sass/screen.scss */
+.ride__spoiler input[type="radio"]:checked + img {
+  display: block;
+}
+/* line 130, ../sass/screen.scss */
+.ride__spoiler img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+/* line 137, ../sass/screen.scss */
 .ride__wheels {
   margin: -105px 30px 0 5px;
   position: relative;
   z-index: 2;
 }
-/* line 59, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .ride__wheels label {
   cursor: pointer;
   width: 50px;
@@ -523,17 +610,17 @@ h1 {
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 74, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .ride__wheels label[for="ride__wheels--monster"] {
   background-image: url(/images/wheel-monster.png);
   left: 75px;
 }
-/* line 82, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 .ride__wheels input[type="radio"]:checked + .ride__wheels__set {
   display: block;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 173, ../sass/screen.scss */
 .ride__wheels__left,
 .ride__wheels__right {
   position: relative;
@@ -543,17 +630,17 @@ h1 {
   animation: roll 2s infinite linear;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 .ride__wheels__left {
   float: left;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 .ride__wheels__right {
   float: right;
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 .ride__wheels__shadow {
   display: block;
   position: absolute;
@@ -579,21 +666,21 @@ h1 {
 }
 
 /* wheel choices */
-/* line 115, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 .ride__wheels__set {
   clear: both;
   display: none;
 }
 
-/* line 124, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 .ride__wheels__set--monster img {
   width: 40%;
 }
-/* line 127, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
 .ride__wheels__set--monster .ride__wheels__left {
   left: -70px;
 }
-/* line 130, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 .ride__wheels__set--monster .ride__wheels__right {
   left: 70px;
 }
