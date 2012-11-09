@@ -9,17 +9,29 @@
 @import "utils";
 @import "keyframes";
 
+body {
+	font-family: 'Faster One', sans-serif;
+}
 
 h1 {
 	position: absolute;
-	top: 3%;
-	left: 3%;
-	width: 100%;
+	top: 15px;
+	left: 20px;
 	text-transform: uppercase;
 	color: #444;
 	font-size: 2em;
 	z-index: 3;
 	pointer-events: none;
+}
+.info {
+	position: absolute;
+	top: 50px;
+	left: 20px;
+	width: 80%;
+	z-index: 100;
+	font-family: sans-serif;
+	font-size: 11px;
+	line-height: 1.2;
 }
 #world {
 	@include background-image(linear-gradient(#ffffff, #ffffff 36%, #aaa 82%, #777 82%, #777 85%, #aaa 93%, #eee));
@@ -51,6 +63,11 @@ h1 {
 			@include animation(rock 2s infinite alternate);
 		}
 			.ride__color {
+				legend {
+					position: absolute;
+					top: -90px;
+					left: 300px;
+				}
 				label {
 					@extend .ir;
 					cursor: pointer;
@@ -65,19 +82,26 @@ h1 {
 					padding: 0 20px;
 					@include border-radius(50%);
 
-					&[for="ride__spoiler--single"] {
-						background-image: url(/images/spoiler-red.png);
-						right: 105px;
+					&[for="ride__color--red"] {
+						background-color: #900;
 					}
-					&[for="ride__spoiler--double"] {
-						background-image: url(/images/spoiler-double.png);
-						right: 180px;
+					&[for="ride__color--green"] {
+						background-color: #218e33;
+						left: 375px;
+					}
+					&[for="ride__color--baby"] {
+						background-color: #24818c;
+						left: 450px;
+					}
+					&[for="ride__color--purple"] {
+						background-color: #8d2560;
+						left: 525px;
 					}
 				}
 				img {
 					width: 100%;
 					height: auto;
-					// display: none;
+					display: none;
 				}
 				input[type="radio"] {
 					@extend .visuallyhidden;
@@ -94,6 +118,13 @@ h1 {
 				right: 0;
 				width: 140px;
 				height: 120px;
+
+				legend {
+					position: absolute;
+					top: -90px;
+					right: 80px;
+					width: 200px;
+				}
 
 				label {
 					@extend .ir;
@@ -140,24 +171,34 @@ h1 {
 		position: relative;
 		z-index: 2;
 
+		legend {
+			position: absolute;
+			bottom: 540px;
+			left: 0;
+		}
+
 		label {
 			@extend .ir;
 			cursor: pointer;
 			width: 50px;
 			height: 50px;
-			background: rgba(0,0,0,0.5) url(/images/wheel-alloy.png) no-repeat center center;
+			background: rgba(0,0,0,0.5) url(/images/wheel-orig.png) no-repeat center center;
 			background-size: auto 90%;
 			display: block;
 			position: absolute;
-			bottom: 500px;
+			bottom: 480px;
 			left: 0;
 			z-index: 10;
 			padding: 0 20px;
 			@include border-radius(50%);
 
+			&[for="ride__wheels--alloy"] {
+				background-image: url(/images/wheel-alloy.png);
+				left: 75px;
+			}
 			&[for="ride__wheels--monster"] {
 				background-image: url(/images/wheel-monster.png);
-				left: 75px;
+				left: 150px;
 			}
 		}
 		input[type="radio"] {
@@ -201,7 +242,16 @@ h1 {
 			clear: both;
 			display: none;
 		}
-		.ride__wheels__set--alloy {
+		.ride__wheels__set--orig {
+			img {
+				width: 18%;
+			}
+			.ride__wheels__left {
+				left: 25px;
+			}
+			.ride__wheels__right {
+				right: 35px;
+			}
 		}
 		.ride__wheels__set--monster {
 

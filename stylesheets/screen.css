@@ -441,12 +441,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 }
 
-/* line 13, ../sass/screen.scss */
+/* line 12, ../sass/screen.scss */
+body {
+  font-family: 'Faster One', sans-serif;
+}
+
+/* line 16, ../sass/screen.scss */
 h1 {
   position: absolute;
-  top: 3%;
-  left: 3%;
-  width: 100%;
+  top: 15px;
+  left: 20px;
   text-transform: uppercase;
   color: #444;
   font-size: 2em;
@@ -454,7 +458,19 @@ h1 {
   pointer-events: none;
 }
 
-/* line 24, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
+.info {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  width: 80%;
+  z-index: 100;
+  font-family: sans-serif;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+/* line 36, ../sass/screen.scss */
 #world {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(36%, #ffffff), color-stop(82%, #aaaaaa), color-stop(82%, #777777), color-stop(85%, #777777), color-stop(93%, #aaaaaa), color-stop(100%, #eeeeee));
   background-image: -webkit-linear-gradient(#ffffff, #ffffff 36%, #aaaaaa 82%, #777777 82%, #777777 85%, #aaaaaa 93%, #eeeeee);
@@ -469,7 +485,7 @@ h1 {
   overflow: hidden;
 }
 
-/* line 33, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 .ride {
   position: absolute;
   bottom: 5%;
@@ -479,7 +495,7 @@ h1 {
   margin-left: -450px;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 .ride__car {
   position: absolute;
   width: 100%;
@@ -487,7 +503,7 @@ h1 {
   left: 0;
 }
 
-/* line 47, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 .ride__body {
   position: relative;
   width: 100%;
@@ -498,7 +514,13 @@ h1 {
   animation: rock 2s infinite alternate;
 }
 
-/* line 54, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
+.ride__color legend {
+  position: absolute;
+  top: -90px;
+  left: 300px;
+}
+/* line 71, ../sass/screen.scss */
 .ride__color label {
   cursor: pointer;
   width: 50px;
@@ -516,27 +538,37 @@ h1 {
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 68, ../sass/screen.scss */
-.ride__color label[for="ride__spoiler--single"] {
-  background-image: url(/images/spoiler-red.png);
-  right: 105px;
+/* line 85, ../sass/screen.scss */
+.ride__color label[for="ride__color--red"] {
+  background-color: #900;
 }
-/* line 72, ../sass/screen.scss */
-.ride__color label[for="ride__spoiler--double"] {
-  background-image: url(/images/spoiler-double.png);
-  right: 180px;
+/* line 88, ../sass/screen.scss */
+.ride__color label[for="ride__color--green"] {
+  background-color: #218e33;
+  left: 375px;
 }
-/* line 77, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
+.ride__color label[for="ride__color--baby"] {
+  background-color: #24818c;
+  left: 450px;
+}
+/* line 96, ../sass/screen.scss */
+.ride__color label[for="ride__color--purple"] {
+  background-color: #8d2560;
+  left: 525px;
+}
+/* line 101, ../sass/screen.scss */
 .ride__color img {
   width: 100%;
   height: auto;
+  display: none;
 }
-/* line 85, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 .ride__color input[type="radio"]:checked + img {
   display: block;
 }
 
-/* line 91, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 .ride__spoiler {
   position: absolute;
   top: 0;
@@ -544,7 +576,14 @@ h1 {
   width: 140px;
   height: 120px;
 }
-/* line 98, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
+.ride__spoiler legend {
+  position: absolute;
+  top: -90px;
+  right: 80px;
+  width: 200px;
+}
+/* line 129, ../sass/screen.scss */
 .ride__spoiler label {
   cursor: pointer;
   width: 50px;
@@ -563,21 +602,21 @@ h1 {
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 113, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 .ride__spoiler label[for="ride__spoiler--single"] {
   background-image: url(/images/spoiler-red.png);
   right: 105px;
 }
-/* line 117, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 .ride__spoiler label[for="ride__spoiler--double"] {
   background-image: url(/images/spoiler-double.png);
   right: 180px;
 }
-/* line 125, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .ride__spoiler input[type="radio"]:checked + img {
   display: block;
 }
-/* line 130, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 .ride__spoiler img {
   position: absolute;
   top: 0;
@@ -585,22 +624,28 @@ h1 {
   display: none;
 }
 
-/* line 137, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 .ride__wheels {
   margin: -105px 30px 0 5px;
   position: relative;
   z-index: 2;
 }
-/* line 143, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
+.ride__wheels legend {
+  position: absolute;
+  bottom: 540px;
+  left: 0;
+}
+/* line 180, ../sass/screen.scss */
 .ride__wheels label {
   cursor: pointer;
   width: 50px;
   height: 50px;
-  background: rgba(0, 0, 0, 0.5) url(/images/wheel-alloy.png) no-repeat center center;
+  background: rgba(0, 0, 0, 0.5) url(/images/wheel-orig.png) no-repeat center center;
   background-size: auto 90%;
   display: block;
   position: absolute;
-  bottom: 500px;
+  bottom: 480px;
   left: 0;
   z-index: 10;
   padding: 0 20px;
@@ -610,17 +655,22 @@ h1 {
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 158, ../sass/screen.scss */
-.ride__wheels label[for="ride__wheels--monster"] {
-  background-image: url(/images/wheel-monster.png);
+/* line 195, ../sass/screen.scss */
+.ride__wheels label[for="ride__wheels--alloy"] {
+  background-image: url(/images/wheel-alloy.png);
   left: 75px;
 }
-/* line 166, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
+.ride__wheels label[for="ride__wheels--monster"] {
+  background-image: url(/images/wheel-monster.png);
+  left: 150px;
+}
+/* line 207, ../sass/screen.scss */
 .ride__wheels input[type="radio"]:checked + .ride__wheels__set {
   display: block;
 }
 
-/* line 173, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 .ride__wheels__left,
 .ride__wheels__right {
   position: relative;
@@ -630,17 +680,17 @@ h1 {
   animation: roll 2s infinite linear;
 }
 
-/* line 177, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 .ride__wheels__left {
   float: left;
 }
 
-/* line 180, ../sass/screen.scss */
+/* line 221, ../sass/screen.scss */
 .ride__wheels__right {
   float: right;
 }
 
-/* line 183, ../sass/screen.scss */
+/* line 224, ../sass/screen.scss */
 .ride__wheels__shadow {
   display: block;
   position: absolute;
@@ -666,21 +716,34 @@ h1 {
 }
 
 /* wheel choices */
-/* line 199, ../sass/screen.scss */
+/* line 240, ../sass/screen.scss */
 .ride__wheels__set {
   clear: both;
   display: none;
 }
 
-/* line 208, ../sass/screen.scss */
+/* line 246, ../sass/screen.scss */
+.ride__wheels__set--orig img {
+  width: 18%;
+}
+/* line 249, ../sass/screen.scss */
+.ride__wheels__set--orig .ride__wheels__left {
+  left: 25px;
+}
+/* line 252, ../sass/screen.scss */
+.ride__wheels__set--orig .ride__wheels__right {
+  right: 35px;
+}
+
+/* line 258, ../sass/screen.scss */
 .ride__wheels__set--monster img {
   width: 40%;
 }
-/* line 211, ../sass/screen.scss */
+/* line 261, ../sass/screen.scss */
 .ride__wheels__set--monster .ride__wheels__left {
   left: -70px;
 }
-/* line 214, ../sass/screen.scss */
+/* line 264, ../sass/screen.scss */
 .ride__wheels__set--monster .ride__wheels__right {
   left: 70px;
 }
