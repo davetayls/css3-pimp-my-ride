@@ -69,7 +69,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 10, ../sass/screen.scss */
 #world {
-  background: red;
+  background-size: 100% auto;
   position: absolute;
   top: 0;
   left: 0;
@@ -77,24 +77,72 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   height: 100%;
 }
 
-/* line 18, ../sass/screen.scss */
-#ride {
+/* line 19, ../sass/screen.scss */
+.ride {
   border: solid 1px green;
   position: absolute;
   bottom: 5%;
-  left: 10%;
-  height: 50%;
-  width: 80%;
+  left: 50%;
+  height: 400px;
+  width: 900px;
+  margin-left: -450px;
 }
 
-/* line 26, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
+.ride__car {
+  border: solid 1px red;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 33, ../sass/screen.scss */
 .wheel {
   background: black;
-  width: 100px;
-  height: 100px;
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 90, color-stop(13%, #222222), color-stop(27%, #000000), color-stop(53%, #222222), color-stop(68%, #333333), color-stop(90%, #000000));
+  background-image: -webkit-radial-gradient(#222222 13%, #000000 27%, #222222 53%, #333333 68%, #000000 90%);
+  background-image: -moz-radial-gradient(#222222 13%, #000000 27%, #222222 53%, #333333 68%, #000000 90%);
+  background-image: -o-radial-gradient(#222222 13%, #000000 27%, #222222 53%, #333333 68%, #000000 90%);
+  background-image: radial-gradient(#222222 13%, #000000 27%, #222222 53%, #333333 68%, #000000 90%);
+  width: 150px;
+  height: 150px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+}
+/* line 43, ../sass/screen.scss */
+.wheel:before {
+  background-color: #fff;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  content: "";
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(23%, #777777), color-stop(25%, #555555), color-stop(27%, #777777), color-stop(51%, #999999), color-stop(63%, #c3c1c4), color-stop(100%, #c3c1c4));
+  background-image: -webkit-radial-gradient(#777777 23%, #555555 25%, #777777 27%, #999999 51%, #c3c1c4 63%, #c3c1c4);
+  background-image: -moz-radial-gradient(#777777 23%, #555555 25%, #777777 27%, #999999 51%, #c3c1c4 63%, #c3c1c4);
+  background-image: -o-radial-gradient(#777777 23%, #555555 25%, #777777 27%, #999999 51%, #c3c1c4 63%, #c3c1c4);
+  background-image: radial-gradient(#777777 23%, #555555 25%, #777777 27%, #999999 51%, #c3c1c4 63%, #c3c1c4);
+  -webkit-box-shadow: 0 0 5px black;
+  -moz-box-shadow: 0 0 5px black;
+  box-shadow: 0 0 5px black;
+}
+
+/* line 56, ../sass/screen.scss */
+.wheel--left {
+  left: 5%;
+}
+
+/* line 59, ../sass/screen.scss */
+.wheel--right {
+  right: 11%;
 }
