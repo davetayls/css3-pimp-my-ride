@@ -142,11 +142,11 @@ h1 {
 					@include border-radius(50%);
 
 					&[for="ride__spoiler--single"] {
-						background-image: url(/images/spoiler-red.png);
+						background-image: url(images/spoiler-red.png);
 						right: 105px;
 					}
 					&[for="ride__spoiler--double"] {
-						background-image: url(/images/spoiler-double.png);
+						background-image: url(images/spoiler-double.png);
 						right: 180px;
 					}
 				}
@@ -182,7 +182,7 @@ h1 {
 			cursor: pointer;
 			width: 50px;
 			height: 50px;
-			background: rgba(0,0,0,0.5) url(/images/wheel-orig.png) no-repeat center center;
+			background: rgba(0,0,0,0.5) url(images/wheel-orig.png) no-repeat center center;
 			background-size: auto 90%;
 			display: block;
 			position: absolute;
@@ -193,11 +193,11 @@ h1 {
 			@include border-radius(50%);
 
 			&[for="ride__wheels--alloy"] {
-				background-image: url(/images/wheel-alloy.png);
+				background-image: url(images/wheel-alloy.png);
 				left: 75px;
 			}
 			&[for="ride__wheels--monster"] {
-				background-image: url(/images/wheel-monster.png);
+				background-image: url(images/wheel-monster.png);
 				left: 150px;
 			}
 		}
