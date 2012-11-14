@@ -604,12 +604,12 @@ h1 {
 }
 /* line 144, ../sass/screen.scss */
 .ride__spoiler label[for="ride__spoiler--single"] {
-  background-image: url(images/spoiler-red.png);
+  background-image: url(../images/spoiler-red.png);
   right: 105px;
 }
 /* line 148, ../sass/screen.scss */
 .ride__spoiler label[for="ride__spoiler--double"] {
-  background-image: url(images/spoiler-double.png);
+  background-image: url(../images/spoiler-double.png);
   right: 180px;
 }
 /* line 156, ../sass/screen.scss */
@@ -641,7 +641,7 @@ h1 {
   cursor: pointer;
   width: 50px;
   height: 50px;
-  background: rgba(0, 0, 0, 0.5) url(images/wheel-orig.png) no-repeat center center;
+  background: rgba(0, 0, 0, 0.5) url(../images/wheel-orig.png) no-repeat center center;
   background-size: auto 90%;
   display: block;
   position: absolute;
@@ -657,20 +657,20 @@ h1 {
 }
 /* line 195, ../sass/screen.scss */
 .ride__wheels label[for="ride__wheels--alloy"] {
-  background-image: url(images/wheel-alloy.png);
+  background-image: url(../images/wheel-alloy.png);
   left: 75px;
 }
 /* line 199, ../sass/screen.scss */
 .ride__wheels label[for="ride__wheels--monster"] {
-  background-image: url(images/wheel-monster.png);
+  background-image: url(../images/wheel-monster.png);
   left: 150px;
 }
-/* line 207, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 .ride__wheels input[type="radio"]:checked + .ride__wheels__set {
   display: block;
 }
 
-/* line 214, ../sass/screen.scss */
+/* line 215, ../sass/screen.scss */
 .ride__wheels__left,
 .ride__wheels__right {
   position: relative;
@@ -680,17 +680,17 @@ h1 {
   animation: roll 2s infinite linear;
 }
 
-/* line 218, ../sass/screen.scss */
+/* line 219, ../sass/screen.scss */
 .ride__wheels__left {
   float: left;
 }
 
-/* line 221, ../sass/screen.scss */
+/* line 222, ../sass/screen.scss */
 .ride__wheels__right {
   float: right;
 }
 
-/* line 224, ../sass/screen.scss */
+/* line 225, ../sass/screen.scss */
 .ride__wheels__shadow {
   display: block;
   position: absolute;
@@ -716,34 +716,34 @@ h1 {
 }
 
 /* wheel choices */
-/* line 240, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 .ride__wheels__set {
   clear: both;
   display: none;
 }
 
-/* line 246, ../sass/screen.scss */
+/* line 247, ../sass/screen.scss */
 .ride__wheels__set--orig img {
   width: 18%;
 }
-/* line 249, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 .ride__wheels__set--orig .ride__wheels__left {
   left: 25px;
 }
-/* line 252, ../sass/screen.scss */
+/* line 253, ../sass/screen.scss */
 .ride__wheels__set--orig .ride__wheels__right {
   right: 35px;
 }
 
-/* line 258, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 .ride__wheels__set--monster img {
   width: 40%;
 }
-/* line 261, ../sass/screen.scss */
+/* line 262, ../sass/screen.scss */
 .ride__wheels__set--monster .ride__wheels__left {
   left: -70px;
 }
-/* line 264, ../sass/screen.scss */
+/* line 265, ../sass/screen.scss */
 .ride__wheels__set--monster .ride__wheels__right {
   left: 70px;
 }
